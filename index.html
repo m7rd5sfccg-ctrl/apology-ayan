@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Ayan 💚</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #173f35;
+            color: #f8f1df;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .screen {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .buttons {
+            margin-top: 35px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 25px;
+
+            position: relative;
+            height: 80px;
+        }
+
+        button {
+            border: none;
+
+            padding: 15px 30px;
+
+            border-radius: 30px;
+
+            font-size: 1rem;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+        }
+
+        /* YES BUTTON */
+
+        #yesBtn {
+            background: #d8b878;
+            color: #173f35;
+
+            position: absolute;
+            left: 35%;
+        }
+
+        /* NO BUTTON */
+
+        #noBtn {
+            background: #f8f1df;
+            color: #173f35;
+
+            position: absolute;
+            right: 20%;
+        }
+
+        /* HIDDEN SCREENS */
+
+        .hidden {
+            display: none;
+        }
+
+        /* APOLOGY CARD */
+
+        .letter {
+            background: #f8f1df;
+
+            color: #173f35;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 40px rgba(0,0,0,0.3);
+
+            backdrop-filter: blur(10px);
+        }
+
+        /* HEART */
+
+        .heart {
+            font-size: 50px;
+
+            animation: heartbeat 1.2s infinite;
+        }
+
+        /* CONTINUE BUTTON */
+
+        .continue {
+            margin-top: 25px;
+
+            background: #d8b878;
+
+            color: #173f35;
+        }
+
+        .continue:hover {
+            transform: scale(1.05);
+        }
+
+        /* FADE ANIMATION */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* HEARTBEAT */
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ========================= -->
+    <!-- FIRST SCREEN -->
+    <!-- ========================= -->
+
+    <div class="screen" id="questionScreen">
+
+        <div class="heart">💚</div>
+
+        <h1>Ayan...</h1>
+
+        <p>
+            I have a very important question for you...
+        </p>
+
+        <h2>
+            Are you mad at me? 🥺
+        </h2>
+
+
+        <div class="buttons">
+
+            <button id="yesBtn">
+                YES 😤
+            </button>
+
+            <button id="noBtn">
+                NO 💚
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- APOLOGY SCREEN -->
+    <!-- ========================= -->
+
+    <div class="screen hidden" id="apologyScreen">
+
+        <div class="letter">
+
+            <div class="heart">
+                💚
+            </div>
+
+            <h1>
+                Okay... you clicked NO 😭
+            </h1>
+
+
+            <p>
+                But seriously, Ayan...
+            </p>
+
+
+            <p>
+                I know I hurt you with the repost,
+                and I'm genuinely sorry.
+            </p>
+
+
+            <p>
+                Even though I didn't think it was a big deal
+                at the time, I understand now that it hurt you,
+                and I shouldn't have dismissed how you felt.
+            </p>
+
+
+            <p>
+                I also want you to know that when we stopped
+                talking, I wasn't trying to show you that
+                I didn't care.
+            </p>
+
+
+            <p>
+                I was still sending you snaps and Spotlights
+                every day, but I didn't realize you weren't
+                active on Snapchat and therefore couldn't see them.
+            </p>
+
+
+            <p>
+                When I felt like you were giving me space,
+                I didn't want to force a conversation or make
+                things worse.
+            </p>
+
+
+            <p>
+                But I understand now that you may have
+                experienced my silence differently.
+            </p>
+
+
+            <p>
+                I'm sorry for my part in all of this.
+            </p>
+
+
+            <p>
+                I don't want us to keep hurting each other
+                because we're both angry or waiting for the
+                other person to make the first move.
+            </p>
+
+
+            <p>
+                I just want us to talk, understand each other,
+                and work things out. 💚
+            </p>
+
+
+            <button
+                class="continue"
+                onclick="showFinal()">
+
+                One more thing... 💚
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- FINAL SCREEN -->
+    <!-- ========================= -->
+
+    <div class="screen hidden" id="finalScreen">
+
+        <div class="letter">
+
+            <div class="heart">
+                💚
+            </div>
+
+
+            <h1>
+                Ayan
+            </h1>
+
+
+            <p>
+                I don't want to win an argument.
+            </p>
+
+
+            <p>
+                I don't want you to forget what happened either.
+            </p>
+
+
+            <p>
+                I just want you to know that I'm sorry,
+                I understand why you were hurt,
+                and I still care about us.
+            </p>
+
+
+            <h2>
+                Can we talk? 💚
+            </h2>
+
+
+            <p>
+                — Ahmed
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script>
+
+
+        const yesBtn =
+            document.getElementById("yesBtn");
+
+
+        const noBtn =
+            document.getElementById("noBtn");
+
+
+        const questionScreen =
+            document.getElementById("questionScreen");
+
+
+        const apologyScreen =
+            document.getElementById("apologyScreen");
+
+
+        const finalScreen =
+            document.getElementById("finalScreen");
+
+
+
+        /* ========================= */
+        /* MOVE YES BUTTON */
+        /* ========================= */
+
+        function moveYesButton() {
+
+            const maxX =
+                window.innerWidth -
+                yesBtn.offsetWidth -
+                20;
+
+
+            const maxY =
+                window.innerHeight -
+                yesBtn.offsetHeight -
+                20;
+
+
+            const randomX =
+                Math.max(
+                    10,
+                    Math.random() * maxX
+                );
+
+
+            const randomY =
+                Math.max(
+                    10,
+                    Math.random() * maxY
+                );
+
+
+            yesBtn.style.position = "fixed";
+
+
+            yesBtn.style.left =
+                randomX + "px";
+
+
+            yesBtn.style.top =
+                randomY + "px";
+
+        }
+
+
+
+        /* ========================= */
+        /* COMPUTER */
+        /* ========================= */
+
+        yesBtn.addEventListener(
+            "mouseenter",
+            moveYesButton
+        );
+
+
+
+        /* ========================= */
+        /* PHONE */
+        /* ========================= */
+
+        yesBtn.addEventListener(
+            "touchstart",
+            function(event) {
+
+                event.preventDefault();
+
+                moveYesButton();
+
+            }
+        );
+
+
+
+        /* ========================= */
+        /* NO BUTTON */
+        /* ========================= */
+
+        noBtn.addEventListener(
+            "click",
+            function() {
+
+                questionScreen.classList.add(
+                    "hidden"
+                );
+
+
+                apologyScreen.classList.remove(
+                    "hidden"
+                );
+
+            }
+        );
+
+
+
+        /* ========================= */
+        /* FINAL SCREEN */
+        /* ========================= */
+
+        function showFinal() {
+
+            apologyScreen.classList.add(
+                "hidden"
+            );
+
+
+            finalScreen.classList.remove(
+                "hidden"
+            );
+
+        }
+
+
+    </script>
+
+</body>
+</html>
